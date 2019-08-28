@@ -1,0 +1,11 @@
+{
+  "datacenter": "untill-dc",
+  "data_dir": "/consul/data",
+  "bind_addr": "{{"{{"}} GetInterfaceIP \"eth0\" {{"}}"}}",
+  "client_addr": "{{"{{"}} GetInterfaceIP \"eth0\" {{"}}"}}",
+  "bootstrap_expect": {{.Bootstrap}},
+  "server": true,
+  "retry_join": [
+    "consul.server"
+  ]
+}
